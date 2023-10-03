@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/*--------------------------------------------------------------
+# Reseteo de Margenes
+--------------------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+header{
+    width: 100%;
+    height: 8vh;
+    padding: 1.25rem;
+    background-color: #FFF3DA;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+/*--------------------------------------------------------------
+# Logo
+--------------------------------------------------------------*/
+.logo{
+    margin-left: 1rem;
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+}
+.logo a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*--------------------------------------------------------------
+# Barra de Navegación
+--------------------------------------------------------------*/
+.navbar {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+    padding-right: 2.5rem;
+}
+.navbar li a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+}
+.navActivo{
+    font-weight: bold;
+}
+
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+main{
+    background-color: #DFCCFB;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Foto Inicial
+--------------------------------------------------------------*/
+.fotoContainer{
+    width: 100%;
+    height: 41vh;
+    overflow: hidden;
+    border-bottom: 16px solid #FFF3DA; /* #FFF3DA */
+}
+.imgInicial{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*--------------------------------------------------------------
+# Section Clases
+--------------------------------------------------------------*/
+.sectionClases{
+    padding: 1.25rem;
+    min-height: 51vh;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.sectionClases div h2{
+    font-size: 2.5rem;
+}
+.sectionClases div p{
+    font-size: 1.25rem;
+}
+.bloqueResumen{
+    margin: 0.5rem;
+    padding: 1rem;
+    width: 26rem;
+    height: 24rem;
+    background-color: #BEADFA;
+    border-radius: 10px;
+    text-align: left;
+}
+
+/*--------------------------------------------------------------
+# Section Clases Explicadas
+--------------------------------------------------------------*/
+.sectionClasesExplicadas{   /* Grid Container */
+    display: grid;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    min-height: 92vh;
+    grid-template-columns: 25% 60%;
+    grid-template-rows: 40vh 40vh 40vh;
+    grid-template-areas: 
+    "item1 item2"
+    "item3 item4"
+    "item5 item6"
+    ;
+    row-gap: 4rem;
+    column-gap: 2rem;
+    justify-content: center;
+    align-content: start;
+}
+.sectionClasesExplicadas div h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.sectionClasesExplicadas div p{
+    font-size: 1.25rem;
+}
+.item1{
+    grid-area: item1;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    padding: 1rem;
+    background-color: #BEADFA;
+    border-radius: 10px;
+    text-align: left;
+}
+.item2{
+    grid-area: item2;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    padding: 1rem;
+    background-color: #D0BFFF;
+    border-radius: 10px;
+    text-align: left;
+}
+.item3{
+    grid-area: item3;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    padding: 1rem;
+    background-color: #BEADFA;
+    border-radius: 10px;
+    text-align: left;
+}
+.item4{
+    grid-area: item4;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    padding: 1rem;
+    background-color: #D0BFFF;
+    border-radius: 10px;
+    text-align: left;
+}
+.item5{
+    grid-area: item5;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    padding: 1rem;
+    background-color: #BEADFA;
+    border-radius: 10px;
+    text-align: left;
+}
+.item6{
+    grid-area: item6;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    padding: 1rem;
+    background-color: #D0BFFF;
+    border-radius: 10px;
+    text-align: left;
+}
+
+/*--------------------------------------------------------------
+# Section Media
+--------------------------------------------------------------*/
+.sectionMedia{          /* Grid Container */
+    display: grid;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    min-height: 92vh;
+    grid-template-columns: 30% 30%;
+    grid-template-rows: 42vh 42vh 42vh;
+    grid-template-areas: 
+    "foto1 foto2"
+    "foto3 foto4"
+    "foto5 foto6"
+    ;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    justify-content: center;
+    align-content: start;
+}
+/* .sectionMedia div{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px grey;
+    border-radius: 10%;
+}
+.sectionMediaRow div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+.foto1{
+    grid-area: foto1;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px grey;
+}
+.foto1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.foto2{
+    grid-area: foto2;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px grey;
+}
+.foto2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.foto3{
+    grid-area: foto3;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    box-shadow: 2px 2px 5px grey;
+}
+.foto3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.foto4{
+    grid-area: foto4;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    box-shadow: 2px 2px 5px grey;
+}
+.foto4 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.foto5{
+    grid-area: foto5;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    box-shadow: 2px 2px 5px grey;
+}
+.foto5 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.foto6{
+    grid-area: foto6;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: cover;
+    box-shadow: 2px 2px 5px grey;
+}
+.foto6 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+/*--------------------------------------------------------------
+# Section Equipo
+--------------------------------------------------------------*/
+.sectionEquipo{
+    padding: 1.25rem;
+    min-height: 92vh;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.sectionEquipo div h2{
+    font-size: 1.875rem;
+}
+.sectionEquipo div p{
+    font-size: 1.25rem;
+}
+.sectionEquipo article{
+    margin: 10px;
+    width: 21.875rem;
+    height: 30rem;
+    background-color: #BEADFA;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px grey;
+    text-align: center;
+}
+.sectionEquipo article div{
+    width: 100%;
+    height: 18.75rem;
+    object-fit: contain;
+}
+.sectionEquipo article div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*--------------------------------------------------------------
+# Section Contacto
+--------------------------------------------------------------*/
+.sectionContacto{
+    padding: 1.25rem;
+    height: 92vh;
+}
+/*--------------------------------------------------------------
+# Section Contacto: Informacion de Contacto
+--------------------------------------------------------------*/
+.sectionInformacionContacto{
+    padding: 1.25rem;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.sectionInformacionContacto p{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+/*--------------------------------------------------------------
+# Section Contacto: Formulario de Contacto
+--------------------------------------------------------------*/
+.sectionFormularioContacto{
+    padding: 1.25rem;
+    font-size: 1rem;
+}
+.sectionFormularioContacto form input{
+    width: 100%;
+}
+.sectionFormularioContacto form textarea{
+    width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+footer{
+    width: 100%;
+    /* height: 20rem; */
+    padding: 1.25rem;
+    background-color: #FFF3DA;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+footer h2{
+    font-size: 1.3rem;
+}
+footer p{
+    font-size: 1rem;
+}
+footer div{
+    margin-top: 2rem;
+    padding: 1rem;
+    width: 20rem;
+    height: 15rem;
+    text-align: left;
+}
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+@media(max-width:1335px){
+    .fotoContainer{
+        min-height: 53vh;
+    }
+    .sectionClases{
+        min-height: 36vh ; /* 8 - 53 - 36 */
+    }
+}
+@media(max-width:1060px){
+    .sectionClasesExplicadas div h2{
+        font-size: 1.5rem;
+    }
+    .sectionClasesExplicadas div p{
+        font-size: 1rem;
+    }
+}
+@media(max-width:1024px){
+    header{
+        height: 6vh;
+    }
+    .fotoContainer{
+        height: 55vh;
+    }
+    .sectionClases{
+        min-height: 36vh ; /* 6 - 55 - 36 */
+    }
+    .sectionMedia{
+        grid-template-columns: 40% 40%;
+    }
+    .sectionEquipo{
+        min-height: 94vh;
+    }
+}
+@media(max-width:903px){
+    footer{
+        flex-direction: column;
+    }
+}
+@media(max-width:700px){
+    .logo{
+        display: none;
+    }
+    header{
+        height: 30vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 0;
+        gap: 1.5rem;
+    }
+    .sectionClasesExplicadas{
+        grid-template-columns: 85%;
+        grid-template-rows: 20vh 40vh 20vh 40vh 20vh 40vh;
+        grid-template-areas: 
+        "item1"
+        "item2"
+        "item3"
+        "item4"
+        "item5"
+        "item6"
+        ;
+        row-gap: 2rem;
+    }
+    .sectionClasesExplicadas div h2{
+        font-size: 1.25rem;
+    }
+    .sectionClasesExplicadas div p{
+        font-size: .875rem;
+    }
+    .sectionMedia{
+        grid-template-columns: 85%;
+        grid-template-rows: repeat(6, 42vh);
+        grid-template-areas: 
+        "foto1"
+        "foto2"
+        "foto3"
+        "foto4"
+        "foto5"
+        "foto6"
+        ;
+        row-gap: 2rem;
+    }
+    .sectionEquipo{
+        flex-direction: column;
+    }
+    .sectionEquipo div h2{
+        font-size: 1.5rem;
+    }
+    .sectionEquipo div p{
+        font-size: 1rem;
+    }
+    .fotoContainer{
+        height: 70vh;
+    }
+}
+@media(max-width:425px){
+    .sectionEquipo article{
+        /* 480 x 350 Aspect Ratio */
+        height: 21.875rem;
+        width: 15.9506rem;
+    }
+    .sectionEquipo article div{
+        height: 13.67rem;
+    }
+    .sectionEquipo div p{
+        font-size: .875rem;
+    }
+    .sectionEquipo div ul{
+        font-size: .75rem;
+    }
+}

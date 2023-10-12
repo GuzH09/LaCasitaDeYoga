@@ -101,12 +101,6 @@ main{
     align-items: center;
     justify-content: space-evenly;
 }
-.sectionClases div h2{
-    font-size: 2.5rem;
-}
-.sectionClases div p{
-    font-size: 1.25rem;
-}
 .bloqueResumen{
     margin: 0.5rem;
     padding: 1rem;
@@ -115,6 +109,30 @@ main{
     background-color: #BEADFA;
     border-radius: 10px;
     text-align: left;
+}
+.bloqueResumen:hover{
+    background-color: #beadfa95;
+}
+.bloqueResumen h2{
+    font-size: 2.5rem;
+}
+.bloqueResumen p{
+    font-size: 1.25rem;
+}
+.bloqueResumen-contenedor-button{
+    margin-top: 1rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.bloqueResumen button{
+    background-color: #ac8eff;
+    border-color: #beadfa9d;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    padding: 0.5rem;
 }
 
 /*--------------------------------------------------------------
@@ -145,8 +163,7 @@ main{
 .sectionClasesExplicadas div p{
     font-size: 1.25rem;
 }
-.item1{
-    grid-area: item1;
+.item{
     width: 100%;
     height: 100%;
     justify-self: center;
@@ -154,56 +171,24 @@ main{
     background-color: #BEADFA;
     border-radius: 10px;
     text-align: left;
+}
+.item1{
+    grid-area: item1;
 }
 .item2{
     grid-area: item2;
-    width: 100%;
-    height: 100%;
-    justify-self: center;
-    padding: 1rem;
-    background-color: #D0BFFF;
-    border-radius: 10px;
-    text-align: left;
 }
 .item3{
     grid-area: item3;
-    width: 100%;
-    height: 100%;
-    justify-self: center;
-    padding: 1rem;
-    background-color: #BEADFA;
-    border-radius: 10px;
-    text-align: left;
 }
 .item4{
     grid-area: item4;
-    width: 100%;
-    height: 100%;
-    justify-self: center;
-    padding: 1rem;
-    background-color: #D0BFFF;
-    border-radius: 10px;
-    text-align: left;
 }
 .item5{
     grid-area: item5;
-    width: 100%;
-    height: 100%;
-    justify-self: center;
-    padding: 1rem;
-    background-color: #BEADFA;
-    border-radius: 10px;
-    text-align: left;
 }
 .item6{
     grid-area: item6;
-    width: 100%;
-    height: 100%;
-    justify-self: center;
-    padding: 1rem;
-    background-color: #D0BFFF;
-    border-radius: 10px;
-    text-align: left;
 }
 
 /*--------------------------------------------------------------
@@ -240,100 +225,42 @@ main{
     height: 100%;
     object-fit: cover;
 } */
-.foto1{
-    grid-area: foto1;
+
+.foto-container{
     width: 100%;
     height: 100%;
     justify-self: center;
-    border-radius: 10px;
     overflow: hidden;
+    border-radius: 10px;
     box-shadow: 2px 2px 5px grey;
 }
-.foto1 img{
+.foto-container img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+}
+.foto1{
+    grid-area: foto1;
 }
 .foto2{
     grid-area: foto2;
-    width: 100%;
-    height: 100%;
-    justify-self: center;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 2px 2px 5px grey;
-}
-.foto2 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
 }
 .foto3{
     grid-area: foto3;
-    width: 100%;
-    height: 100%;
-    justify-self: center;
-    border-radius: 10px;
-    overflow: hidden;
-    object-fit: cover;
-    box-shadow: 2px 2px 5px grey;
-}
-.foto3 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
 }
 .foto4{
     grid-area: foto4;
-    width: 100%;
-    height: 100%;
-    justify-self: center;
-    border-radius: 10px;
-    overflow: hidden;
-    object-fit: cover;
-    box-shadow: 2px 2px 5px grey;
 }
 .foto4 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    object-position: top;
 }
 .foto5{
     grid-area: foto5;
-    width: 100%;
-    height: 100%;
-    justify-self: center;
-    border-radius: 10px;
-    overflow: hidden;
-    object-fit: cover;
-    box-shadow: 2px 2px 5px grey;
-}
-.foto5 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
 }
 .foto6{
     grid-area: foto6;
-    width: 100%;
-    height: 100%;
-    justify-self: center;
-    border-radius: 10px;
-    overflow: hidden;
-    object-fit: cover;
-    box-shadow: 2px 2px 5px grey;
 }
-.foto6 img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
+
 /*--------------------------------------------------------------
 # Section Equipo
 --------------------------------------------------------------*/

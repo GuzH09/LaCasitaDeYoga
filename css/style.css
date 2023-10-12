@@ -177,18 +177,21 @@ main{
 }
 .item2{
     grid-area: item2;
+    background-color: #D0BFFF;
 }
 .item3{
     grid-area: item3;
 }
 .item4{
     grid-area: item4;
+    background-color: #D0BFFF;
 }
 .item5{
     grid-area: item5;
 }
 .item6{
     grid-area: item6;
+    background-color: #D0BFFF;
 }
 
 /*--------------------------------------------------------------

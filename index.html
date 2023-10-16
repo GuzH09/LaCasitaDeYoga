@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Inicio</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -11,72 +12,92 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        <header>
-            <!--Barra de navegacion -->
-            <nav>
-                <!--Logo -->
-                <div class="logo">
-                    <a href="#">
-                        <img src="./assets/img/logo.jpg" alt="Logo Mujer Yoga">
-                    </a>
-                </div>
-                <input type="checkbox" name="" id="toggle">
-                <label for="toggle"><i class="material-icons">menu</i></label>
-                <div class="menu">
-                    <ul>
-                        <li><a href="#" class="navActivo">Inicio</a></li>
-                        <li><a href="./pages/clases.html">Clases</a></li>
-                        <li><a href="./pages/media.html">Media</a></li>
-                        <li><a href="./pages/equipo.html">Equipo</a></li>
-                        <li><a href="./pages/contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
+        <header>            
+            <nav class="navbar navbar-expand-lg">
+                <section class="container-fluid">
+                    <!-- Logo de la página: Bootstrap -->
+                    <div class="logo">
+                        <a class="navbar-brand" href="#">
+                            <img src="./assets/img/logo.jpg" alt="Logo Mujer Yoga">
+                        </a>
+                    </div>
+                    <!-- Este es el toggler para mobile/tablet: Bootstrap -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Esta es la barra de navegación: Bootstrap -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./pages/clases.html">Clases</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./pages/media.html">Media</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./pages/equipo.html">Equipo</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                </section>
             </nav>
         </header>
 
         <main>
-            <!--Foto Inicial -->
-            <div class="fotoContainer">
-                <img src="./assets/img/yoga-inicio-index.jpg" class="imgInicial" alt="Mujeres haciendo yoga">
+            <!-- Carousel Inicial: Bootstrap -->
+            <div id="carouselAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="./assets/img/yoga-inicio-index.jpg" class="d-block w-100 imgInicial" alt="Mujeres haciendo yoga">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <img src="./assets/img/yoga-inicio-index-2.jpg" class="d-block w-100 imgInicial" alt="Mujeres haciendo yoga en la playa">
+                    </div> 
+                    <div class="carousel-item" data-bs-interval="10000">
+                        <img src="./assets/img/yoga-inicio-index-3.jpg" class="d-block w-100 imgInicial" alt="Clase de yoga en terraza">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-
-            <!--Section de Vista Previa de Clases/Servicios -->
+            <!--Section de Vista Previa de Clases/Servicios: Flexbox -->
             <section class="sectionClases">
                 <!--Caja 1 -->
                 <article class="bloqueResumen">
                     <h2>Clase Tipo 1</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem modi cupiditate nihil laborum alias tenetur, consequuntur voluptate dolores sit natus deleniti, sequi voluptatibus distinctio.</p>
-                    <div class="bloqueResumen-contenedor-button">
-                        <a href="./pages/clases.html#clase1">
-                            <button>Saber más</button>
-                        </a>
+                    <div class="d-grid col-6 mx-auto">
+                        <a href="./pages/clases.html#clase1" class="btn btn-primary" role="button" aria-disabled="true">Saber Mas</a>
                     </div>
                 </article>
                 <!--Caja 2 -->
                 <article class="bloqueResumen">
                     <h2>Clase Tipo 2</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem modi cupiditate nihil laborum alias tenetur, consequuntur voluptate dolores sit natus deleniti, sequi voluptatibus distinctio.</p>
-                    <div class="bloqueResumen-contenedor-button">
-                        <a href="./pages/clases.html#clase2">
-                            <button>Saber más</button>
-                        </a>
+                    <div class="d-grid col-6 mx-auto">
+                        <a href="./pages/clases.html#clase2" class="btn btn-primary" role="button" aria-disabled="true">Saber Mas</a>
                     </div>
                 </article>
                 <!--Caja 3 -->
                 <article class="bloqueResumen">
                     <h2>Clase Tipo 3</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem modi cupiditate nihil laborum alias tenetur, consequuntur voluptate dolores sit natus deleniti, sequi voluptatibus distinctio.</p>
-                    <div class="bloqueResumen-contenedor-button">
-                        <a href="./pages/clases.html#clase3">
-                            <button>Saber más</button>
-                        </a>
+                    <div class="d-grid col-6 mx-auto">
+                        <a href="./pages/clases.html#clase3" class="btn btn-primary" role="button" aria-disabled="true">Saber Mas</a>
                     </div>
                 </article>
             </section>
         </main>
 
         <footer>
-            <!--Footer con 3 Columnas -->
+            <!--Footer con 3 Columnas: Flexbox -->
             <div>
                 <h2>NOSOTROS</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nam optio iste doloremque vero cumque deleniti illo quo laboriosam</p>
@@ -90,5 +111,7 @@
                 <p>Si querés suscribirte a nuestro newsletter mensual de novedades sobre nuestro estudio, dejanos tu mail y nos pondremos en contacto.</p>
             </div>
         </footer>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     </body>
 </html>

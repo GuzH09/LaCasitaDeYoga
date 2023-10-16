@@ -309,7 +309,7 @@ main{
 }
 .sectionContacto{
     padding: 1.25rem;
-    height: 70vh;
+    min-height: 80vh;
 }
 /*--------------------------------------------------------------
 # Section Contacto: Informacion de Contacto
@@ -401,9 +401,6 @@ footer div{
     }
     .sectionEquipo{
         min-height: 94vh;
-    }
-    .sectionContacto{
-        min-height: 80vh;
     }
 }
 @media(max-width:903px){

@@ -1,0 +1,63 @@
+.sectionNosotrosTexto{
+    padding-top: 1.5rem;
+    width: 100%;
+    min-height: 18vh;
+    border-bottom: 16px solid map-get($color, naranja-fondo);
+    h2{
+        font-family: 'Courgette';
+        text-align: center;
+        font-size: 2rem;
+        font-weight: lighter;
+    }
+}
+.sectionNosotros{
+    background-image: url('../assets/img/pattern.jpg');
+    background-repeat: repeat;
+    padding: 1.25rem;
+    min-height: 71vh;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    article{
+        margin: 10px;
+        width: 21.875rem;
+        min-height: 30rem;
+        background-color: map-get($color, violeta-fondo-card); 
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 2px 2px 5px map-get($color, gris);
+        text-align: center;
+        div{
+            width: 100%;
+            height: 18.75rem;
+            object-fit: contain;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        h2{
+            font-size: 1.875rem;
+            font-weight: bold;
+            padding-bottom: 0.3rem;
+            margin: 0;
+        }
+        p{
+            font-size: 1.25rem;
+            padding-bottom: 0.4rem;
+            margin: 0;
+        }
+        ul{
+            padding-left: 0;
+            list-style-type: none;
+            list-style-position: inside;
+            li{
+                font-size: .75rem;
+            }
+        }
+    }
+}

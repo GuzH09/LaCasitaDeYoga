@@ -1,0 +1,73 @@
+.carousel-de-fotos{
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    border-bottom: 16px solid map-get($color, naranja-fondo);
+    .item-de-carousel{
+        height: 100%;
+        .imgInicial{
+            @extend .item-de-carousel;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+.sectionClases{
+    background-image: url('../assets/img/pattern.jpg');
+    background-repeat: repeat;
+    padding: 1.25rem;
+    min-height: 51vh;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    article{
+        margin: 0.5rem;
+        padding: 1rem;
+        width: 26rem;
+        height: 24rem;
+        background-color: map-get($color, violeta-fondo-card); 
+        border-radius: 10px;
+        text-align: left;
+        box-shadow: 2px 2px 5px grey;
+        overflow: hidden;
+        &:hover{
+            background-color: map-get($color, violeta-fondo-card-hover);
+        }
+        img{
+            height: 10rem;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        h2{
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 0;
+            line-height: 1.5;
+            color: map-get($color, negro);
+        }
+        .texto-card{
+            min-height: 6rem;
+            width: 100%;
+            p{
+                font-size: 1.25rem;
+                margin-bottom: 0;
+            }
+        }
+        .boton-primario{
+            font-weight: 500;
+            color: map-get($color, negro-boton-fuente);
+            background-color: map-get($color, violeta-boton);
+            border-color: map-get($color, violeta-boton-borde);
+            &:hover{
+                color: map-get($color, negro);
+                background-color: map-get($color, violeta-boton-hover);
+                border-color: map-get($color, boton-borde);
+            }
+        }
+    }
+}

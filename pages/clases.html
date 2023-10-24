@@ -5,35 +5,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Clases</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/brands.min.css">
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-        <header>            
-            <nav class="navbar navbar-expand-lg">
-                <section class="container-fluid">
-                    <!-- Logo de la página: Bootstrap -->
-                    <div class="logo">
-                        <a class="navbar-brand" href="#">
-                            <img src="../assets/img/logo.png" alt="Logo Mujer Yoga" class="d-inline-block align-text-center">
-                            La Casita de Yoga
-                        </a>
-                    </div>
+        <header>
+            <!-- Logo de la página: Bootstrap -->
+            <section class="section-logo">
+                <div class="logo">
+                    <a href="#">
+                        <img src="../assets/img/logo.png" alt="Logo Mujer Yoga" class="d-inline-block align-text-center">
+                    </a>
+                </div>
+            </section>
+            <!-- Barra de navegación: Bootstrap -->
+            <nav class="navbar navbar-expand-lg barra-navegacion">
+                <section class="container-fluid contenedor-header">
                     <!-- Este es el toggler para mobile/tablet: Bootstrap -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <!-- Esta es la barra de navegación: Bootstrap -->
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse lista-links" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="#">Clases</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./media.html">Media</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./equipo.html">Equipo</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                            <li class="nav-item"><a class="nav-link link" href="../index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link active link link-activo" href="#">Clases</a></li>
+                            <li class="nav-item"><a class="nav-link link" href="./media.html">Media</a></li>
+                            <li class="nav-item"><a class="nav-link link" href="./nosotros.html">Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link link" href="./contacto.html">Contacto</a></li>
                         </ul>
                     </div>
                 </section>
@@ -45,41 +45,52 @@
             <section class="sectionClasesExplicadas">
                 <!-- Item 1 -->
                 <article class="item item1">
+                    <h2 id="clase1">Principiantes</h2>
+                    <p>Destinado a quienes nunca han practicado Yoga y se están comenzando en la disciplina. Busca consolidar las bases.</p>
                     <div>
-                        <h2 id="clase1">Clase Tipo 1</h2>
-                        <p>Lorem ipsum UNO dolor sit amet consectetur adipisicing elit.</p>
+                        <img src="../assets/img/posicion-yoga-1.png" alt="Personal empresarial del Equipo">
                     </div>
                 </article>
                 <!-- Item 2 -->
                 <article class="item item2">
-                    <div>
-                        <p>Lorem ipsum DOS dolor sit amet consectetur adipisicing elit. Voluptatem modi cupiditate nihil laborum alias tenetur, consequuntur voluptate dolores sit natus deleniti, sequi voluptatibus distinctio. Qui porro quas quia beatae iure. Lorem ipsum DOS dolor sit amet consectetur adipisicing elit. Voluptatem modi cupiditate nihil laborum alias tenetur, consequuntur voluptate dolores sit natus deleniti, sequi voluptatibus distinctio. Qui porro quas quia beatae iure.</p>
-                    </div>
+                    <p>Comprende 49 asanas básicas, en sus fases intermedias.
+                    Busca mejorar la estructura del cuerpo y lubricar articulaciones creando libertad de movimiento, fortalecer y alargar ligamentos y músculos tonificando órganos internos.</p>
+
+                    <p>Comprende asanas de pie, sentadas y torsiones; estiramientos hacia adelante y hacia atrás; posturas supinas, abdominales e invertidas.
+                    Se preparan secuencias de posturas que permitan penetrar la conciencia dirigiendola hacia el interior y teniendo un efecto sobre la mente y el sistema nervioso.</p>
+
+                    <p>Principiantes utilizan pocos elementos, y las clases son más dinámicas.</p>
                 </article>
                 <!-- Item 3 -->
                 <article class="item item3">
+                    <h2 id="clase2">Intermedio</h2>
+                    <p>Pretende un examen más a fondo de uno mismo mediante la práctica. Tratar de alcanzar con la inteligencia el cuerpo orgánico.</p>
                     <div>
-                        <h2 id="clase2">Clase Tipo 2</h2>
-                        <p>Lorem ipsum TRES dolor sit amet consectetur adipisicing elit.</p>
+                        <img src="../assets/img/posicion-yoga-2.png" alt="Personal empresarial del Equipo">
                     </div>
                 </article>
                 <!-- Item 4 -->
                 <article class="item item4">
-                    <div>
-                        <p>Lorem ipsum DOS dolor sit amet consectetur adipisicing elit. Voluptatem modi cupiditate nihil laborum alias tenetur, consequuntur voluptate dolores sit natus deleniti, sequi voluptatibus distinctio. Qui porro quas quia beatae iure. Lorem ipsum DOS dolor sit amet consectetur adipisicing elit. Voluptatem modi cupiditate nihil laborum alias tenetur, consequuntur voluptate dolores sit natus deleniti, sequi voluptatibus distinctio. Qui porro quas quia beatae iure.</p>
-                    </div>
+                    <p>Este nivel consta de 53 posturas y de la práctica de Pranayama (control de la respiración). Aquí se profundiza la práctica introduciendo acciones más específicas.</p>
+                    
+                    <p>Se incorpora el elemento como maestro para enseñar la acción correcta. Aumentan los desafíos, las posturas de equilibrio y de fuerza.</p>
                 </article>
                 <!-- Item 5 -->
                 <article class="item item5">
+                    <h2 id="clase3">Yoga Suave</h2>
+                    <p>En este espacio se trabaja adaptando la clase a cada caso en particular, utilizando los elementos como soporte para permitir que todos puedan acceder a los beneficios del Yoga.</p>
                     <div>
-                        <h2 id="clase3">Clase Tipo 3</h2>
-                        <p>Lorem ipsum CINCO dolor sit amet consectetur adipisicing elit.</p>
+                        <img src="../assets/img/posicion-yoga-3.png" alt="Personal empresarial del Equipo">
                     </div>
                 </article>
                 <!-- Item 6 -->
                 <article class="item item6">
+                    <p>Utilizamos sillas, cintos, bloques, bolsters, mantas y demás accesorios para lograr el asana y así poder llegar a estudiar el cuerpo y la mente conociendo las limitaciones, tendencias y posibilidades.</p>
+                    <p>El rol de los elementos de apoyo es que sirvan de herramientas para todas las personas en sus distintos estados de salud.</p>
+                    <p>"El yoga es para todos". El elemento cumple un propósito y no se debe desarrollar una dependencia de él.</p>
                     <div>
-                        <p>Lorem ipsum DOS dolor sit amet consectetur adipisicing elit. Voluptatem modi cupiditate nihil laborum alias tenetur, consequuntur voluptate dolores sit natus deleniti, sequi voluptatibus distinctio. Qui porro quas quia beatae iure. Lorem ipsum DOS dolor sit amet consectetur adipisicing elit. Voluptatem modi cupiditate nihil laborum alias tenetur, consequuntur voluptate dolores sit natus deleniti, sequi voluptatibus distinctio. Qui porro quas quia beatae iure.</p>
+                        <img src="../assets/img/clases-elementos.jpeg" alt="Elementos de Yoga">
+                        <img src="../assets/img/clases-elementos-2.jpeg" alt="Elementos de Yoga">
                     </div>
                 </article>
             </section>
@@ -87,18 +98,33 @@
         
         <footer>
             <!--Footer con 3 Columnas: Flexbox -->
-            <div>
-                <h2>NOSOTROS</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nam optio iste doloremque vero cumque deleniti illo quo laboriosam</p>
-            </div>
-            <div>
-                <h2>CONTACTANOS</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, dolor eos doloribus enim facere. Email: asdasdasd</p>
-            </div>
-            <div>
-                <h2>NUESTRO NEWSLETTER</h2>
-                <p>Si querés suscribirte a nuestro newsletter mensual de novedades sobre nuestro estudio, dejanos tu mail y nos pondremos en contacto.</p>
-            </div>
+            <section class="footer-top">
+                <div>
+                    <h2>NOSOTROS</h2>
+                    <p>Somos un Centro de Yoga de la ciudad de Allen, Rio Negro.</p>
+                </div>
+                <div>
+                    <h2>CONTACTANOS</h2>
+                    <p>Int. Mariani 533, Allen, Río Negro.
+                    Email: loremipsum@gmail.com
+                    Telefono: 00000000000</p>
+                </div>
+                <div>
+                    <h2>NUESTRO NEWSLETTER</h2>
+                    <p>Si querés suscribirte a nuestro newsletter mensual de novedades sobre nuestro estudio, dejanos tu mail y nos pondremos en contacto.</p>
+                </div>
+            </section>
+            <section class="footer-center">
+                <div>
+                    <a href="https://www.instagram.com/lacasitadeyogaallen/" class="icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/nuriaoscaryoga/" class="icon"><i class="fab fa-facebook"></i></a>
+                </div>
+            </section>
+            <section class="footer-bottom">
+                <div>
+                    © 2023 La Casita de Yoga, todos los derechos reservados.
+                </div>
+            </section>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>

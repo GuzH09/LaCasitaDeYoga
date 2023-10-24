@@ -1,0 +1,52 @@
+.sectionMedia{
+    display: grid;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    min-height: 92vh;
+    grid-template-columns: 30% 30%;
+    grid-template-rows: 42vh 42vh 42vh;
+    grid-template-areas: 
+    "foto1 foto2"
+    "foto3 foto4"
+    "foto5 foto6"
+    ;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    justify-content: center;
+    align-content: start;
+    .foto-container{
+        width: 100%;
+        height: 100%;
+        justify-self: center;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px map-get($color, gris);
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .foto1{
+        grid-area: foto1;
+    }
+    .foto2{
+        grid-area: foto2;
+    }
+    .foto3{
+        grid-area: foto3;
+    }
+    .foto4{
+        grid-area: foto4;
+        img{
+            object-position: top;
+        }
+    }
+    .foto5{
+        grid-area: foto5;
+    }
+    .foto6{
+        grid-area: foto6;
+    }
+}

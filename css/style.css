@@ -451,7 +451,10 @@ footer {
       padding-bottom: 1.5rem;
       justify-content: right; }
   .sectionClasesExplicadas .item h2 {
-    font-size: 1.75rem; } }
+    font-size: 1.75rem; }
+  .sectionClasesExplicadas .item2 .fotos-clases img, .sectionClasesExplicadas .item4 .fotos-clases img, .sectionClasesExplicadas .item6 .fotos-clases img {
+    height: 100%;
+    width: 100%; } }
 
 @media (max-width: 903px) {
   footer .footer-top {
@@ -479,7 +482,7 @@ footer {
     .sectionClasesExplicadas .item h2 {
       font-size: 1.75rem; }
     .sectionClasesExplicadas .item1, .sectionClasesExplicadas .item3, .sectionClasesExplicadas .item5 {
-      min-height: 20vh; }
+      min-height: 40vh; }
   .sectionMedia {
     grid-template-columns: 85%;
     grid-template-rows: repeat(6, 42vh);

@@ -1,28 +1,29 @@
+/*--------------------------------------------------------------
+# Main - Contacto
+--------------------------------------------------------------*/
 .responsive-map{
     overflow:hidden;
     height: 20vh;
     iframe{
-        width:100%;
+        width: 100%;
     }
 }
 .sectionContacto{
-    padding: 1.25rem;
-    min-height: 80vh;
+    @include container-size($padding: 1.25rem, $min-height: 80vh);
     #contact_icons{
-        padding-left: 0.3rem;
-        padding-right: 0.3rem;
+        @include container-size($padding-left: 0.3rem, $padding-right: 0.3rem);
     }
     #p-contact{
         margin: 0;
-        font-size: 1.2rem;
-        font-weight: 300;
+        @include fonts($size: map-get($tamaño-font, main-contacto-p), $weight: 300);
     }
     .sectionFormularioContacto{
         display: flex;
         justify-content: center;
         form{
             width: 70%;
-            font-size: 1rem;
+            font-size: map-get($tamaño-font, main-contacto-form);
+            @import "./components/bootstrap-btn";
             input{
                 width: 100%;
             }

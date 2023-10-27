@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-# Reseteo de Margenes - (Creo que puedo borrarlo si ya agregue Bootstrap)
+# Reseteo de Margenes
 --------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
@@ -9,6 +9,9 @@
   padding: 0;
   box-sizing: border-box; }
 
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
 header {
   width: 100%;
   top: 0px;
@@ -20,11 +23,11 @@ header {
     justify-content: center;
     background-color: #fff3dace; }
     header .section-logo .logo {
-      width: 4.5rem;
-      height: 4.5rem; }
+      height: 4.5rem;
+      width: 4.5rem; }
       header .section-logo .logo a img {
-        width: 100%;
         height: 100%;
+        width: 100%;
         object-fit: cover; }
   header .barra-navegacion {
     padding: 0; }
@@ -42,21 +45,28 @@ header {
           justify-content: center;
           gap: 2.5rem; }
           header .barra-navegacion .contenedor-header .lista-links ul .link {
-            font-size: 1.25rem; }
+            font-family: "Poppins", sans-serif;
+            text-align: center;
+            font-size: 1.25rem;
+            font-weight: lighter;
+            text-decoration: none; }
+            header .barra-navegacion .contenedor-header .lista-links ul .link:hover {
+              transform: scale(1.2); }
           header .barra-navegacion .contenedor-header .lista-links ul .link-activo {
             font-weight: bold; }
-          header .barra-navegacion .contenedor-header .lista-links ul li a {
-            font-weight: lighter;
-            text-align: center;
-            text-decoration: none;
-            font-family: 'Poppins', sans-serif; }
 
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
 main {
-  background-color: #DFCCFB; }
+  background-image: linear-gradient(to bottom, #D0BFFF, #ac8eff); }
 
+/*--------------------------------------------------------------
+# Main - Index
+--------------------------------------------------------------*/
 .carousel-de-fotos {
-  width: 100%;
   height: 40vh;
+  width: 100%;
   overflow: hidden;
   border-bottom: 16px solid #FFF3DA; }
   .carousel-de-fotos .item-de-carousel, .carousel-de-fotos .item-de-carousel .imgInicial {
@@ -69,61 +79,65 @@ main {
   background-image: url("../assets/img/pattern.jpg");
   background-repeat: repeat;
   padding: 1.25rem;
+  width: 100%;
   min-height: 51vh;
   display: flex;
-  width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  align-items: center; }
   .sectionClases article {
-    margin: 0.5rem;
     padding: 1rem;
-    width: 26rem;
+    margin: 0.5rem;
     height: 24rem;
-    background-color: #BEADFA;
+    width: 26rem;
+    background-image: linear-gradient(to top, #DFCCFB, #ac8eff);
     border-radius: 10px;
     text-align: left;
     box-shadow: 2px 2px 5px grey;
-    overflow: hidden; }
+    overflow: hidden;
+    transition: width 0.5s; }
     .sectionClases article:hover {
-      background-color: #beadfa95; }
+      width: 30rem; }
     .sectionClases article img {
       height: 10rem;
       width: 100%;
       object-fit: cover;
       border-radius: 10px; }
     .sectionClases article h2 {
-      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      font-family: "Roboto", sans-serif;
       font-size: 2.5rem;
       font-weight: bold;
-      margin: 0;
       line-height: 1.5;
       color: black; }
     .sectionClases article .texto-card {
-      min-height: 6rem;
-      width: 100%; }
+      width: 100%;
+      min-height: 6rem; }
       .sectionClases article .texto-card p {
         font-size: 1.25rem;
         margin-bottom: 0; }
     .sectionClases article .boton-primario {
       font-weight: 500;
       color: #1a1a1a;
-      background-color: #ac8eff;
+      background-color: #c5b2ff;
       border-color: #7d4eff40; }
       .sectionClases article .boton-primario:hover {
         color: black;
         background-color: #ac8eff93;
         border-color: rgba(0, 0, 0, 0.5); }
 
+/*--------------------------------------------------------------
+# Main - Clases Explicadas
+--------------------------------------------------------------*/
 .sectionClasesExplicadas {
   background-image: url("../assets/img/pattern.jpg");
   background-repeat: repeat;
-  display: grid;
   padding-top: 2rem;
   padding-bottom: 2rem;
   width: 100%;
   min-height: 92vh;
+  display: grid;
   grid-template-columns: 25% 60%;
   grid-template-areas: "item1 item2" "item3 item4" "item5 item6";
   row-gap: 4rem;
@@ -131,12 +145,12 @@ main {
   justify-content: center;
   align-content: start; }
   .sectionClasesExplicadas .item {
+    padding: 1rem;
     width: 100%;
     min-height: 40vh;
     position: relative;
     justify-self: center;
-    padding: 1rem;
-    background-color: #BEADFA;
+    background-image: linear-gradient(to bottom right, #BEADFA, #ac8eff);
     border-radius: 10px;
     text-align: left; }
     .sectionClasesExplicadas .item h2 {
@@ -151,11 +165,43 @@ main {
       bottom: 0;
       right: 0; }
       .sectionClasesExplicadas .item1 div img, .sectionClasesExplicadas .item3 div img, .sectionClasesExplicadas .item5 div img {
-        width: 8rem;
-        height: 8rem; }
+        height: 8rem;
+        width: 8rem; }
   .sectionClasesExplicadas .item2, .sectionClasesExplicadas .item4, .sectionClasesExplicadas .item6 {
     grid-area: item2;
-    background-color: #D0BFFF; }
+    background-image: linear-gradient(to bottom right, #DFCCFB, #BEADFA); }
+    .sectionClasesExplicadas .item2 p, .sectionClasesExplicadas .item4 p, .sectionClasesExplicadas .item6 p {
+      margin-bottom: 0; }
+    .sectionClasesExplicadas .item2 .fotos-clases, .sectionClasesExplicadas .item4 .fotos-clases, .sectionClasesExplicadas .item6 .fotos-clases {
+      height: 12rem;
+      width: 100%;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center; }
+      .sectionClasesExplicadas .item2 .fotos-clases img, .sectionClasesExplicadas .item4 .fotos-clases img, .sectionClasesExplicadas .item6 .fotos-clases img {
+        box-shadow: 2px 2px 5px grey;
+        height: 100%;
+        width: 48%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px;
+        transition: width 0.5s; }
+        .sectionClasesExplicadas .item2 .fotos-clases img:hover, .sectionClasesExplicadas .item4 .fotos-clases img:hover, .sectionClasesExplicadas .item6 .fotos-clases img:hover {
+          width: 60%; }
+    .sectionClasesExplicadas .item2 .boton-primario, .sectionClasesExplicadas .item4 .boton-primario, .sectionClasesExplicadas .item6 .boton-primario {
+      font-weight: 500;
+      color: #1a1a1a;
+      background-color: #c5b2ff;
+      border-color: #7d4eff40; }
+      .sectionClasesExplicadas .item2 .boton-primario:hover, .sectionClasesExplicadas .item4 .boton-primario:hover, .sectionClasesExplicadas .item6 .boton-primario:hover {
+        color: black;
+        background-color: #ac8eff93;
+        border-color: rgba(0, 0, 0, 0.5); }
+    .sectionClasesExplicadas .item2 .boton-primario, .sectionClasesExplicadas .item4 .boton-primario, .sectionClasesExplicadas .item6 .boton-primario {
+      margin-top: 1rem; }
   .sectionClasesExplicadas .item3 {
     grid-area: item3; }
   .sectionClasesExplicadas .item4 {
@@ -164,28 +210,17 @@ main {
     grid-area: item5; }
   .sectionClasesExplicadas .item6 {
     grid-area: item6; }
-    .sectionClasesExplicadas .item6 div {
-      width: 100%;
-      height: 10rem;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: space-around;
-      gap: 1rem; }
-      .sectionClasesExplicadas .item6 div img {
-        width: 48%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 10px; }
 
+/*--------------------------------------------------------------
+# Main - Media
+--------------------------------------------------------------*/
 .sectionMedia {
-  display: grid;
   padding-top: 2rem;
   padding-bottom: 2rem;
   width: 100%;
   min-height: 92vh;
-  grid-template-columns: 30% 30%;
+  display: grid;
+  grid-template-columns: 35% 35%;
   grid-template-rows: 42vh 42vh 42vh;
   grid-template-areas: "foto1 foto2" "foto3 foto4" "foto5 foto6";
   row-gap: 2rem;
@@ -193,16 +228,22 @@ main {
   justify-content: center;
   align-content: start; }
   .sectionMedia .foto-container {
-    width: 100%;
     height: 100%;
+    width: 100%;
     justify-self: center;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px grey; }
+    overflow: hidden; }
     .sectionMedia .foto-container img {
+      height: 85%;
       width: 100%;
-      height: 100%;
+      box-shadow: 2px 2px 5px grey;
+      border-radius: 10px;
       object-fit: cover; }
+    .sectionMedia .foto-container p {
+      font-family: "Courgette";
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: lighter;
+      color: #5c4086; }
   .sectionMedia .foto1 {
     grid-area: foto1; }
   .sectionMedia .foto2 {
@@ -218,61 +259,78 @@ main {
   .sectionMedia .foto6 {
     grid-area: foto6; }
 
+/*--------------------------------------------------------------
+# Main - Nosotros
+--------------------------------------------------------------*/
 .sectionNosotrosTexto {
   padding-top: 1.5rem;
   width: 100%;
   min-height: 18vh;
-  border-bottom: 16px solid #FFF3DA; }
+  border-bottom: 16px solid #FFF3DA;
+  background-image: linear-gradient(to bottom, #DFCCFB, #BEADFA); }
   .sectionNosotrosTexto h2 {
-    font-family: 'Courgette';
+    font-family: "Courgette";
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: lighter; }
+  .sectionNosotrosTexto p {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.25rem;
     font-weight: lighter; }
 
 .sectionNosotros {
   background-image: url("../assets/img/pattern.jpg");
   background-repeat: repeat;
   padding: 1.25rem;
-  min-height: 71vh;
-  display: flex;
   width: 100%;
+  min-height: 61vh;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  align-items: center; }
   .sectionNosotros article {
-    margin: 10px;
+    margin: 0.625rem;
     width: 21.875rem;
     min-height: 30rem;
-    background-color: #BEADFA;
+    background-image: linear-gradient(to bottom, #DFCCFB, #ac8eff);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 2px 2px 5px grey;
-    text-align: center; }
+    text-align: center;
+    transition: width 0.5s; }
+    .sectionNosotros article:hover {
+      width: 28rem; }
     .sectionNosotros article div {
-      width: 100%;
       height: 18.75rem;
+      width: 100%;
       object-fit: contain; }
       .sectionNosotros article div img {
-        width: 100%;
         height: 100%;
+        width: 100%;
         object-fit: cover; }
     .sectionNosotros article h2 {
+      padding-top: 0.3rem;
+      margin: 0;
+      font-family: "Roboto", sans-serif;
       font-size: 1.875rem;
       font-weight: bold;
-      padding-bottom: 0.3rem;
-      margin: 0; }
+      color: black; }
     .sectionNosotros article p {
-      font-size: 1.25rem;
       padding-bottom: 0.4rem;
-      margin: 0; }
+      margin: 0;
+      font-size: 1.5rem; }
     .sectionNosotros article ul {
-      padding-left: 0;
+      padding-left: 0rem;
       list-style-type: none;
       list-style-position: inside; }
       .sectionNosotros article ul li {
-        font-size: .75rem; }
+        font-size: 0.875rem; }
 
+/*--------------------------------------------------------------
+# Main - Contacto
+--------------------------------------------------------------*/
 .responsive-map {
   overflow: hidden;
   height: 20vh; }
@@ -283,11 +341,11 @@ main {
   padding: 1.25rem;
   min-height: 80vh; }
   .sectionContacto #contact_icons {
-    padding-left: 0.3rem;
-    padding-right: 0.3rem; }
+    padding-right: 0.3rem;
+    padding-left: 0.3rem; }
   .sectionContacto #p-contact {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 300; }
   .sectionContacto .sectionFormularioContacto {
     display: flex;
@@ -295,30 +353,42 @@ main {
     .sectionContacto .sectionFormularioContacto form {
       width: 70%;
       font-size: 1rem; }
+      .sectionContacto .sectionFormularioContacto form .boton-primario {
+        font-weight: 500;
+        color: #1a1a1a;
+        background-color: #c5b2ff;
+        border-color: #7d4eff40; }
+        .sectionContacto .sectionFormularioContacto form .boton-primario:hover {
+          color: black;
+          background-color: #ac8eff93;
+          border-color: rgba(0, 0, 0, 0.5); }
       .sectionContacto .sectionFormularioContacto form input, .sectionContacto .sectionFormularioContacto form textarea {
         width: 100%; }
 
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
 footer {
-  width: 100%;
   padding: 1.25rem;
+  width: 100%;
   background-color: #FFF3DA; }
   footer .footer-top {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-evenly;
+    align-items: center;
     font-family: 'Poppins', sans-serif; }
     footer .footer-top div {
-      margin-top: 2rem;
       padding: 1rem;
-      width: 20rem;
+      margin-top: 2rem;
       height: 10rem;
+      width: 20rem;
       text-align: left; }
       footer .footer-top div h2 {
-        font-size: 1.3rem;
-        font-weight: bold;
         margin: 0;
+        font-size: 1.25rem;
+        font-weight: bold;
         line-height: 1.5;
         color: black; }
       footer .footer-top div p {
@@ -326,7 +396,7 @@ footer {
   footer .footer-center {
     display: flex;
     justify-content: center;
-    text-align: center;
+    align-items: center;
     margin-bottom: 0.5rem; }
     footer .footer-center .icon {
       text-decoration: none;
@@ -337,16 +407,23 @@ footer {
         font-size: 2rem; }
   footer .footer-bottom {
     text-align: center;
-    font-size: .75rem; }
+    font-size: 0.75rem; }
 
+/*--------------------------------------------------------------
+# Media Queries - Responsive
+--------------------------------------------------------------*/
 @media (max-width: 1335px) {
   .sectionClases {
     min-height: 36vh; } }
 
 @media (max-width: 1060px) {
   .sectionClasesExplicadas .item h2 {
-    font-size: 2rem; }
+    font-size: 2.25rem; }
   .sectionClasesExplicadas .item p {
+    font-size: 1rem; }
+  .sectionNosotrosTexto h2 {
+    font-size: 2.25rem; }
+  .sectionNosotrosTexto p {
     font-size: 1rem; } }
 
 @media (max-width: 1024px) {
@@ -372,7 +449,9 @@ footer {
     header .barra-navegacion .contenedor-header {
       padding-top: 1.5rem;
       padding-bottom: 1.5rem;
-      justify-content: right; } }
+      justify-content: right; }
+  .sectionClasesExplicadas .item h2 {
+    font-size: 1.75rem; } }
 
 @media (max-width: 903px) {
   footer .footer-top {
@@ -380,9 +459,17 @@ footer {
   .sectionClases article {
     height: 28rem; }
     .sectionClases article .texto-card {
-      min-height: 9.375rem; }
+      min-height: 9.375rem; } }
+
+@media (max-width: 770px) {
   .sectionClasesExplicadas .item h2 {
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+  .sectionNosotrosTexto h2 {
+    font-size: 2rem; }
+  .sectionNosotrosTexto p {
+    font-size: 0.875rem; }
+  .sectionMedia .foto-container p {
+    font-size: 1rem; } }
 
 @media (max-width: 700px) {
   .sectionClasesExplicadas {
@@ -390,28 +477,20 @@ footer {
     grid-template-areas: "item1" "item2" "item3" "item4" "item5" "item6";
     row-gap: 2rem; }
     .sectionClasesExplicadas .item h2 {
-      font-size: 1.25rem; }
-    .sectionClasesExplicadas .item p {
-      font-size: .875rem; }
-    .sectionClasesExplicadas .item6 div {
-      height: 20rem;
-      flex-direction: column; }
-      .sectionClasesExplicadas .item6 div img {
-        width: 100%;
-        height: 50%; }
+      font-size: 1.75rem; }
+    .sectionClasesExplicadas .item1, .sectionClasesExplicadas .item3, .sectionClasesExplicadas .item5 {
+      min-height: 20vh; }
   .sectionMedia {
     grid-template-columns: 85%;
     grid-template-rows: repeat(6, 42vh);
     grid-template-areas: "foto1" "foto2" "foto3" "foto4" "foto5" "foto6";
     row-gap: 2rem; }
+    .sectionMedia .foto-container p {
+      font-size: 1.25rem; }
   .sectionNosotros {
     flex-direction: column; }
   .sectionContacto .sectionFormularioContacto form {
     width: 100%; } }
-
-@media (max-width: 575px) {
-  .sectionNosotrosTexto h2 {
-    font-size: 1.5rem; } }
 
 @media (max-width: 425px) {
   .sectionNosotros article {

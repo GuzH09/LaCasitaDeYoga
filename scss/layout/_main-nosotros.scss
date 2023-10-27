@@ -1,62 +1,57 @@
+/*--------------------------------------------------------------
+# Main - Nosotros
+--------------------------------------------------------------*/
 .sectionNosotrosTexto{
-    padding-top: 1.5rem;
-    width: 100%;
-    min-height: 18vh;
-    border-bottom: 16px solid map-get($color, naranja-fondo);
+    @include container-size($padding-top: 1.5rem, $width: 100%, $min-height: 18vh);
+    border-bottom: 16px solid $naranja-fondo;
+    background-image: linear-gradient( to bottom, $violeta-fondo-main, $violeta-fondo-card );
     h2{
-        font-family: 'Courgette';
-        text-align: center;
-        font-size: 2rem;
-        font-weight: lighter;
+        @include fonts($family: 'Courgette', $align: center, $size: map-get($tamaño-font, main-nosotros-frase-h2), $weight: lighter);
+    }
+    p{
+        padding: 1rem;
+        @include fonts($align: center, $size: map-get($tamaño-font, main-nosotros-frase-p), $weight: lighter);
     }
 }
 .sectionNosotros{
     background-image: url('../assets/img/pattern.jpg');
     background-repeat: repeat;
-    padding: 1.25rem;
-    min-height: 71vh;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
+    @include container-size($padding: 1.25rem, $width: 100%, $min-height: 61vh);
+    @include flex($direction: row, $wrap: wrap, $justify: space-evenly, $align: center);
     article{
-        margin: 10px;
-        width: 21.875rem;
-        min-height: 30rem;
-        background-color: map-get($color, violeta-fondo-card); 
+        @include container-size($margin:.625rem, $width:21.875rem, $min-height:30rem);
+        background-image: linear-gradient( to bottom, $violeta-fondo-main, $violeta-fondo-card-tercero );
         border-radius: 10px;
         overflow: hidden;
-        box-shadow: 2px 2px 5px map-get($color, gris);
+        box-shadow: 2px 2px 5px $gris;
         text-align: center;
+        transition: width 0.5s;
+        &:hover{
+            width:28rem
+        }
         div{
-            width: 100%;
-            height: 18.75rem;
+            @include container-size($height: 18.75rem, $width: 100%);
             object-fit: contain;
             img{
-                width: 100%;
-                height: 100%;
+                @include container-size($height: 100%, $width: 100%);
                 object-fit: cover;
             }
         }
         h2{
-            font-size: 1.875rem;
-            font-weight: bold;
-            padding-bottom: 0.3rem;
-            margin: 0;
+            @include container-size($padding-top: 0.3rem, $margin: 0);
+            @include fonts($family: ('Roboto', sans-serif), $size: map-get($tamaño-font, main-nosotros-card-h2), $weight: bold);
+            color: $negro;
         }
         p{
-            font-size: 1.25rem;
-            padding-bottom: 0.4rem;
-            margin: 0;
+            @include container-size($padding-bottom: 0.4rem, $margin: 0);
+            font-size: map-get($tamaño-font, main-nosotros-card-p);
         }
         ul{
-            padding-left: 0;
+            padding-left: 0rem;
             list-style-type: none;
             list-style-position: inside;
             li{
-                font-size: .75rem;
+                font-size: map-get($tamaño-font, main-nosotros-card-li);
             }
         }
     }

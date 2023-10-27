@@ -1,3 +1,6 @@
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
 main{
-    background-color: map-get($color, violeta-fondo-main);
+    background-image: linear-gradient( to bottom, $violeta-fondo-card-secundario, $violeta-fondo-card-tercero );
 }

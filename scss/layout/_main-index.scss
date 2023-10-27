@@ -1,10 +1,12 @@
+/*--------------------------------------------------------------
+# Main - Index
+--------------------------------------------------------------*/
 .carousel-de-fotos{
-    width: 100%;
-    height: 40vh;
+    @include container-size($height: 40vh, $width: 100%);    
     overflow: hidden;
-    border-bottom: 16px solid map-get($color, naranja-fondo);
+    border-bottom: 16px solid $naranja-fondo;
     .item-de-carousel{
-        height: 100%;
+        @include container-size($height: 100%);
         .imgInicial{
             @extend .item-de-carousel;
             object-fit: cover;
@@ -15,59 +17,37 @@
 .sectionClases{
     background-image: url('../assets/img/pattern.jpg');
     background-repeat: repeat;
-    padding: 1.25rem;
-    min-height: 51vh;
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
+    @include container-size($padding: 1.25rem, $width: 100%, $min-height: 51vh);
+    @include flex($direction: row, $wrap: wrap, $justify: space-evenly, $align: center);
     article{
-        margin: 0.5rem;
-        padding: 1rem;
-        width: 26rem;
-        height: 24rem;
-        background-color: map-get($color, violeta-fondo-card); 
+        @include container-size($padding: 1rem, $margin: 0.5rem, $height: 24rem, $width: 26rem);
+        background-image: linear-gradient( to top, $violeta-fondo-main, $violeta-fondo-card-tercero );
         border-radius: 10px;
         text-align: left;
         box-shadow: 2px 2px 5px grey;
         overflow: hidden;
+        transition: width 0.5s;
         &:hover{
-            background-color: map-get($color, violeta-fondo-card-hover);
+            width: 30rem;
         }
         img{
-            height: 10rem;
-            width: 100%;
+            @include container-size($height: 10rem, $width: 100%);
             object-fit: cover;
             border-radius: 10px;
         }
         h2{
-            font-family: 'Roboto', sans-serif;
-            font-size: 2.5rem;
-            font-weight: bold;
             margin: 0;
+            @include fonts($family: ('Roboto', sans-serif), $size: map-get($tamaño-font, main-index-card-h2), $weight: bold);
             line-height: 1.5;
-            color: map-get($color, negro);
+            color: $negro;
         }
         .texto-card{
-            min-height: 6rem;
-            width: 100%;
+            @include container-size($width: 100%, $min-height: 6rem);
             p{
-                font-size: 1.25rem;
+                font-size: map-get($tamaño-font, main-index-card-p);
                 margin-bottom: 0;
             }
         }
-        .boton-primario{
-            font-weight: 500;
-            color: map-get($color, negro-boton-fuente);
-            background-color: map-get($color, violeta-boton);
-            border-color: map-get($color, violeta-boton-borde);
-            &:hover{
-                color: map-get($color, negro);
-                background-color: map-get($color, violeta-boton-hover);
-                border-color: map-get($color, boton-borde);
-            }
-        }
+        @import "./components/bootstrap-btn";
     }
 }

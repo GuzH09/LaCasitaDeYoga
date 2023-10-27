@@ -1,0 +1,11 @@
+.boton-primario{
+    font-weight: 500;
+    color: $negro-boton-fuente;
+    background-color: $violeta-boton;
+    border-color: $violeta-boton-borde;
+    &:hover{
+        color: $negro;
+        background-color: $violeta-boton-hover;
+        border-color: $boton-borde;
+    }
+}

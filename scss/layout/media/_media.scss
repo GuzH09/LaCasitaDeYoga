@@ -1,3 +1,6 @@
+/*--------------------------------------------------------------
+# Media Queries - Responsive
+--------------------------------------------------------------*/
 @media(max-width:1335px){
     .sectionClases{
         min-height: 36vh ;
@@ -7,11 +10,19 @@
     .sectionClasesExplicadas{
         .item{
             h2{
-                font-size: 2rem;
+                font-size: map-get($tamaño-font, main-clases-card-h2-lg);
             }
             p{
-                font-size: 1rem;
+                font-size: map-get($tamaño-font, main-clases-card-p-lg);
             }
+        }
+    }
+    .sectionNosotrosTexto{
+        h2{
+            font-size: map-get($tamaño-font, main-nosotros-frase-h2-lg);
+        }
+        p{
+            font-size: map-get($tamaño-font, main-nosotros-frase-p-lg);
         }
     }
 }
@@ -35,7 +46,7 @@
             top: 0;
             left: 0;
             z-index: 20;
-            background-color: map-get($color, cero-oppacity-header);
+            background-color: $cero-oppacity-header;
         }
         .barra-navegacion{
             padding: 0;
@@ -43,6 +54,13 @@
                 padding-top: 1.5rem;
                 padding-bottom: 1.5rem;
                 justify-content: right;
+            }
+        }
+    }
+    .sectionClasesExplicadas{
+        .item{
+            h2{
+                font-size: map-get($tamaño-font, main-clases-card-h2-md);
             }
         }
     }
@@ -61,10 +79,27 @@
             }
         }
     }
+}
+@media(max-width:770px){
     .sectionClasesExplicadas{
         .item{
             h2{
-                font-size: 1.5rem;
+                font-size: map-get($tamaño-font, main-clases-card-h2-sm);
+            }
+        }
+    }
+    .sectionNosotrosTexto{
+        h2{
+            font-size: map-get($tamaño-font, main-nosotros-frase-h2-md);
+        }
+        p{
+            font-size: map-get($tamaño-font, main-nosotros-frase-p-md);
+        }
+    }
+    .sectionMedia{
+        .foto-container{
+            p{
+                font-size: map-get($tamaño-font, main-media-p-lg);
             }
         }
     }
@@ -83,21 +118,11 @@
         row-gap: 2rem;
         .item{
             h2{
-                font-size: 1.25rem;
-            }
-            p{
-                font-size: .875rem;
+                font-size: map-get($tamaño-font, main-clases-card-h2-md);
             }
         }
-        .item6{
-            div{
-                height: 20rem;
-                flex-direction: column;
-                img{
-                    width: 100%;
-                    height: 50%;
-                }
-            }
+        .item1{
+            min-height: 20vh;
         }
     }
     .sectionMedia{
@@ -112,6 +137,11 @@
         "foto6"
         ;
         row-gap: 2rem;
+        .foto-container{
+            p{
+                font-size: map-get($tamaño-font, main-media-p);
+            }
+        }
     }
     .sectionNosotros{
         flex-direction: column;
@@ -121,13 +151,6 @@
             form{
                 width: 100%;
             }
-        }
-    }
-}
-@media(max-width:575px){
-    .sectionNosotrosTexto{
-        h2{
-            font-size: 1.5rem;
         }
     }
 }

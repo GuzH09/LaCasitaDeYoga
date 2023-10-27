@@ -1,50 +1,41 @@
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
 footer{
-    // @include flex(row, nowrap, center, flex-end, .625rem);
-    width: 100%;
-    padding: 1.25rem;
-    background-color: map-get($color, naranja-fondo); 
+    @include container-size($padding: 1.25rem, $width: 100%);
+    background-color: $naranja-fondo;
     .footer-top{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-evenly;
+        @include flex($direction: row, $wrap: wrap, $justify: space-evenly, $align: center);
         font-family: 'Poppins', sans-serif;
         div{
-            margin-top: 2rem;
-            padding: 1rem;
-            width: 20rem;
-            height: 10rem;
+            @include container-size($padding: 1rem, $margin-top: 2rem, $height: 10rem, $width: 20rem);
             text-align: left;
             h2{
-                font-size: 1.3rem;
-                font-weight: bold;
                 margin: 0;
+                @include fonts($size: map-get($tamaño-font, footer-h2), $weight: bold);
                 line-height: 1.5;
-                color: map-get($color, negro);
+                color: $negro;
             }
             p{
-                font-size: 1rem;
+                font-size: map-get($tamaño-font, footer-p);
             }
         }
     }
     .footer-center{
-        display: flex;
-        justify-content: center;
-        text-align: center;
+        @include flex($justify: center, $align: center);
         margin-bottom: 0.5rem;
         .icon{
             text-decoration: none;
             padding: 0.5rem;
             i{
-                color: map-get($color, negro);
+                color: $negro;
                 font-style: normal;
-                font-size: 2rem;
+                font-size: map-get($tamaño-font, footer-icon);
             }
         }
     }
     .footer-bottom{
         text-align: center;
-        font-size: .75rem;
+        font-size: map-get($tamaño-font, footer-copyright);
     }
 }

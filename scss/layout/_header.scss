@@ -1,3 +1,6 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
 header{
     width: 100%;
     top: 0px;
@@ -7,14 +10,12 @@ header{
         padding-top: 0.3rem;
         display: flex;
         justify-content: center;
-        background-color: map-get($color, naranja-fondo-header); 
+        background-color: $naranja-fondo-header; 
         .logo{
-            width: 4.5rem;
-            height: 4.5rem;
+            @include container-size($height: 4.5rem, $width: 4.5rem);
             a{
                 img{
-                    width: 100%;
-                    height: 100%;
+                    @include container-size($height: 100%, $width: 100%);
                     object-fit: cover;
                 }
             }
@@ -23,31 +24,23 @@ header{
     .barra-navegacion{
         padding: 0;
         .contenedor-header{
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            background-color: map-get($color, naranja-fondo-header);
+            @include container-size($padding-top: 0.5rem, $padding-bottom: 0.5rem);
+            @include flex($direction: row, $justify: center, $align: center);
+            background-color: $naranja-fondo-header;
             .lista-links{
                 flex-grow: 0;
                 ul{
                     justify-content: center;
                     gap: 2.5rem;
                     .link{
-                        font-size: 1.25rem;
+                        @include fonts($family: ('Poppins', sans-serif), $size: map-get($tamaño-font, header-li), $align: center, $weight: lighter);
+                        text-decoration: none;
+                        &:hover{
+                            transform: scale(1.2);
+                        }
                     }
                     .link-activo{
                         font-weight: bold;
-                    }
-                    li{
-                        a{
-                            font-weight: lighter;
-                            text-align: center;
-                            text-decoration: none;
-                            font-family: 'Poppins', sans-serif;
-                        }
                     }
                 }
             }

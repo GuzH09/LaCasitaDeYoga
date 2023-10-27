@@ -1,10 +1,10 @@
+/*--------------------------------------------------------------
+# Main - Media
+--------------------------------------------------------------*/
 .sectionMedia{
+    @include container-size($padding-top: 2rem, $padding-bottom: 2rem, $width: 100%, $min-height: 92vh);
     display: grid;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    width: 100%;
-    min-height: 92vh;
-    grid-template-columns: 30% 30%;
+    grid-template-columns: 35% 35%;
     grid-template-rows: 42vh 42vh 42vh;
     grid-template-areas: 
     "foto1 foto2"
@@ -16,16 +16,18 @@
     justify-content: center;
     align-content: start;
     .foto-container{
-        width: 100%;
-        height: 100%;
+        @include container-size($height: 100%, $width: 100%);
         justify-self: center;
         overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 2px 2px 5px map-get($color, gris);
         img{
-            width: 100%;
-            height: 100%;
+            @include container-size($height: 85%, $width: 100%);
+            box-shadow: 2px 2px 5px $gris;
+            border-radius: 10px;
             object-fit: cover;
+        }
+        p{
+            @include fonts($family: 'Courgette', $align: center, $size: map-get($tamaño-font, main-media-p), $weight: lighter);
+            color: $violeta-media-fuente;
         }
     }
     .foto1{

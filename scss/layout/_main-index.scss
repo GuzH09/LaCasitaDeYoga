@@ -18,7 +18,7 @@
     background-image: url('../assets/img/pattern.jpg');
     background-repeat: repeat;
     @include container-size($padding: 1.25rem, $width: 100%, $min-height: 51vh);
-    @include flex($direction: row, $wrap: wrap, $justify: space-evenly, $align: center);
+    @include flex($direction: row, $wrap: nowrap, $justify: space-evenly, $align: center, $gap: .625rem);
     article{
         @include container-size($padding: 1rem, $margin: 0.5rem, $height: 24rem, $width: 26rem);
         background-image: linear-gradient( to top, $violeta-fondo-main, $violeta-fondo-card-tercero );

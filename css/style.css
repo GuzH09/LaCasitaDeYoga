@@ -53,7 +53,8 @@ header {
             header .barra-navegacion .contenedor-header .lista-links ul .link:hover {
               transform: scale(1.2); }
           header .barra-navegacion .contenedor-header .lista-links ul .link-activo {
-            font-weight: bold; }
+            font-weight: bold;
+            color: black; }
 
 /*--------------------------------------------------------------
 # Main
@@ -83,9 +84,10 @@ main {
   min-height: 51vh;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-evenly;
-  align-items: center; }
+  align-items: center;
+  gap: 0.625rem; }
   .sectionClases article {
     padding: 1rem;
     margin: 0.5rem;
@@ -415,6 +417,10 @@ footer {
 @media (max-width: 1335px) {
   .sectionClases {
     min-height: 36vh; } }
+
+@media (max-width: 1300px) {
+  .sectionClases {
+    flex-wrap: wrap; } }
 
 @media (max-width: 1060px) {
   .sectionClasesExplicadas .item h2 {

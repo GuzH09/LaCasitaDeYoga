@@ -368,6 +368,59 @@ main {
         width: 100%; }
 
 /*--------------------------------------------------------------
+# Main - Error 404
+--------------------------------------------------------------*/
+.sectionError {
+  background-image: url("../assets/img/pattern.jpg");
+  background-repeat: repeat;
+  padding: 1.25rem;
+  width: 100%;
+  min-height: 54vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  .sectionError article {
+    height: 24rem;
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center; }
+    .sectionError article img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px; }
+    .sectionError article h2 {
+      margin: 0;
+      font-family: "Roboto", sans-serif;
+      font-size: 3.5rem;
+      font-weight: bold;
+      line-height: 1.5;
+      color: black;
+      text-align: center; }
+    .sectionError article h3 {
+      text-align: center; }
+    .sectionError article .texto-card {
+      margin-bottom: 0.625rem;
+      width: 100%; }
+      .sectionError article .texto-card p {
+        text-align: center;
+        font-size: 1.25rem;
+        margin-bottom: 0; }
+    .sectionError article .boton-primario {
+      font-weight: 500;
+      color: #1a1a1a;
+      background-color: #c5b2ff;
+      border-color: #7d4eff40; }
+      .sectionError article .boton-primario:hover {
+        color: black;
+        background-color: #ac8eff93;
+        border-color: rgba(0, 0, 0, 0.5); }
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 footer {
@@ -463,6 +516,13 @@ footer {
     width: 100%; } }
 
 @media (max-width: 903px) {
+  .sectionError {
+    display: flex;
+    flex-direction: column; }
+    .sectionError article {
+      width: 100%; }
+      .sectionError article:nth-child(1) {
+        display: none; }
   footer .footer-top {
     flex-direction: column; }
   .sectionClases article {

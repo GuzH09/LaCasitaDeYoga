@@ -1,0 +1,37 @@
+/*--------------------------------------------------------------
+# Main - Error 404
+--------------------------------------------------------------*/
+.sectionError{
+    background-image: url('../assets/img/pattern.jpg');
+    background-repeat: repeat;
+    @include container-size($padding: 1.25rem, $width: 100%, $min-height: 54vh);
+    @include flex($direction: row, $justify: center, $align: center);
+    article{
+        @include container-size($height: 24rem, $width: 40rem);
+        @include flex($direction:column, $wrap:nowrap, $justify: center, $align: center);
+        img{
+            @include container-size($height: 100%, $width: 100%);
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        h2{
+            margin: 0;
+            @include fonts($family: ('Roboto', sans-serif), $size: map-get($tamaño-font, main-error-card-h2), $weight: bold);
+            line-height: 1.5;
+            color: $negro;
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+        }
+        .texto-card{
+            @include container-size($margin-bottom:0.625rem, $width: 100%);
+            p{
+                text-align: center;
+                font-size: map-get($tamaño-font, main-error-card-p);
+                margin-bottom: 0;
+            }
+        }
+        @import "./components/bootstrap-btn";
+    }
+}

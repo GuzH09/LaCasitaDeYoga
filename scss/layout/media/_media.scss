@@ -78,6 +78,15 @@
     }
 }
 @media(max-width:903px){
+    .sectionError{
+        @include flex($direction: column);
+        article{
+            width: 100%;
+            &:nth-child(1){
+                display: none;
+            }
+        }
+    }
     footer{
         .footer-top{
             flex-direction: column;

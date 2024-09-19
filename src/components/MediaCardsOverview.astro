@@ -1,0 +1,36 @@
+---
+import MediaCard from "@/components/MediaCards.astro";
+import { getEntry } from 'astro:content';
+
+const contentData = await getEntry('media', 'media');
+
+interface yogamedia {
+  class?: string;
+  title?: string;
+  summary?: string;
+  imageAlt?: string;
+  imageSrc?: ImageMetadata;
+}
+---
+
+<section class="bg-back-texture bg-repeat">
+  <section 
+    class={`
+    px-4 pt-6 pb-8 
+    flex flex-col items-center gap-10 
+    lg:flex-row lg:flex-wrap lg:gap-4 lg:px-4 lg:justify-center
+    xl:px-0 xl:gap-6
+    2xl:px-44
+    `}
+  >
+    {contentData.data.media.map((yogamedia: yogamedia) => (
+      <MediaCard
+        class=""
+        title={yogamedia.title}
+        summary={yogamedia.summary}
+        imageAlt={yogamedia.imageAlt}
+        imageSrc={yogamedia.imageSrc}
+      />
+    ))}
+  </section>
+</section>

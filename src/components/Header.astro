@@ -1,0 +1,86 @@
+---
+import Logo from "./Logo.astro";
+import ThemeToggle from "./ThemeToggle.astro";
+import LogoImage from "../assets/logo.png";
+
+declare global {
+  interface Document {
+    startViewTransition: (callback: () => void) => void;
+  }
+  interface Element {
+    style: any;
+  }
+}
+---
+
+<header
+  class={`
+  z-30 sticky top-0
+  `}
+>
+  <section
+    class={`
+    relative z-30 py-2 px-4 flex justify-between bg-[#fff3da] lg:justify-center
+    `}
+  >
+    <Logo logoSrc={LogoImage} logoAlt="La Casita de Yoga Logo" />
+    <button id="menuToggle" class="text-xl lg:hidden">
+      <i class="fa-solid fa-bars" id="menuIcon"></i>
+    </button>
+  </section>
+
+  <nav
+    id="navbar"
+    class={`
+    bg-[#fff3da] w-full absolute py-2 z-20 -translate-y-full transition duration-300 shadow-lg shadow-black/40
+    lg:-translate-y-0 lg:static
+    `}
+  >
+    <ul class="flex flex-col justify-center items-center gap-2 lg:flex-row lg:gap-10">
+      <li class=""><a class="text-gray-800" href="./clases">Clases</a></li>
+      <li class=""><a class="text-gray-800" href="./media">Media</a></li>
+      <li class=""><a class="text-gray-800" href="./nosotros">Nosotros</a></li>
+      <li class=""><a class="text-gray-800" href="./contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Overlay element for click shielding -->
+  <section id="overlay" class="hidden fixed inset-0 z-10"></section>
+</header>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    // JavaScript to handle the navbar toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const menuIcon = document.getElementById("menuIcon");
+    const navbar = document.getElementById("navbar");
+    const overlay = document.getElementById("overlay");
+
+    function openNavbar() {
+      navbar.classList.remove("-translate-y-full");
+      menuIcon.classList.replace("fa-bars", "fa-xmark");
+      overlay.classList.remove("hidden");
+    }
+
+    function closeNavbar() {
+      navbar.classList.add("-translate-y-full");
+      menuIcon.classList.replace("fa-xmark", "fa-bars");
+      overlay.classList.add("hidden");
+    }
+
+    menuToggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      if (navbar.classList.contains("-translate-y-full")) {
+        openNavbar();
+      } else {
+        closeNavbar();
+      }
+    });
+
+    // Prevent clicks on the overlay from reaching the content below
+    overlay.addEventListener("click", (event) => {
+      event.stopPropagation(); // Stop clicks from propagating
+      closeNavbar(); // Close the navbar if clicked on the overlay
+    });
+  });
+</script>

@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+	class?: string;
+	title?: string;
+	summary?: string;
+	imageAlt?: string;
+	imageSrc?: ImageMetadata;
+}
+
+const { class: additionalClasses, title, summary, imageAlt, imageSrc } = Astro.props
+---
+<article 
+  class={`
+  ${additionalClasses}
+  h-auto w-full md:w-4/5 lg:w-5/12 lg:min-h-[422px] xl:w-[30%] 2xl:min-h-[440px]
+  flex flex-col items-center 
+  rounded-lg
+  bg-gradient-to-b from-violet-300 to-violet-100
+  border-violet-200 border 
+	shadow-md shadow-black/20 
+  `}
+>
+  <div class="p-3 h-[320px] w-full">
+    <Image 
+      src={imageSrc} 
+      alt={imageAlt} 
+      class="rounded-lg object-cover size-full justify-self-center"
+      widths={[240, 540, 720, imageSrc.width]}
+		  sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${imageSrc.width}px`}
+    />
+  </div>
+
+  <div class="w-full px-2 pb-2 text-center text-gray-800 font-light text-sm flex flex-col gap-2">
+    <h3 class="text-base font-[500]">{title}</h3>
+    <p class="prose-sm">{summary}</p>
+  </div>
+  
+</article>

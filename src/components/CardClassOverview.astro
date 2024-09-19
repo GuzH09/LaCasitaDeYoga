@@ -1,0 +1,48 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+	src: ImageMetadata
+  alt: string
+  title: string
+  description: string
+  link?: string
+  class?: string
+}
+
+const { src, alt, title, description, link, class: additionalClasses } = Astro.props
+---
+<article 
+  class={`
+  ${additionalClasses} 
+	rounded-lg text-left overflow-hidden lg:w-5/12 xl:w-[30%] 2xl:w-full
+	border-violet-200 border
+	shadow-md shadow-black/20
+  `}
+>
+	<div class="bg-gradient-to-b from-violet-400 to-white">
+		<div class="p-3 h-[200px] w-full">
+			<Image 
+				src={src} 
+				class="size-full object-cover rounded-lg"
+				widths={[240, 540, 720, src.width]}
+				sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${src.width}px`}
+				alt={alt} 
+			/>
+		</div>
+
+		<div class="w-full px-3 pt-2 pb-4 text-left text-gray-800 xl:min-h-[150px] 2xl:min-h-[120px]">
+			<h2 class="font-roboto font-[500] text-3xl mb-2">{title}</h2>
+			<p class="text-sm">
+				{description}
+			</p>
+		</div>
+	</div>
+
+	<div class="flex w-full justify-center py-3 bg-violet-100">
+		<a href={link} role="button" class="font-[500] text-[#f7f7f7] bg-[#ac8eff] border-[#7d4eff40] border-[1px] rounded-full w-full text-center py-2 mx-2">
+			Saber Mas
+		</a>
+	</div>
+
+</article>

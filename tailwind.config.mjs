@@ -8,7 +8,7 @@ export default {
 	theme: {
 		extend: {
 			backgroundImage: {
-        'back-texture': "url('../src/assets/pattern.jpg')",
+        'back-texture': "url('/pattern.jpg')",
       },
 			fontFamily: {
 				'poppins': ['Poppins', 'sans-serif'],
